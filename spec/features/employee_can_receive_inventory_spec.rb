@@ -9,8 +9,8 @@ feature 'receive inventory' , %Q{
   # Acceptance Criteria:
 
   # * I must specify a title, description, and quantity of the food item
-  # * If I do not specify the required information, I am prompted to fix errors
-  #   and to resubmit
+  # * If I do not specify the required information,
+  #   I am prompted to fix errors and to resubmit
   # * If I specify the required information, my inventory entry is recorded.
 
   scenario 'user provides required information' do
@@ -32,7 +32,7 @@ feature 'receive inventory' , %Q{
     visit new_receipt_path
     click_button 'Receive'
 
-    expect(page).to_not have_content('Receiveipt was successfully created')
+    expect(page).to_not have_content('Receipt was successfully created')
     expect(Receipt.count).to eql(prev_count)
   end
 

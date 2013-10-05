@@ -1,0 +1,11 @@
+<h2>List of Inventory Items</h2>
+<div>
+  <%= @receipts.each do |receipt| %>
+    <p><%= receipt.title %></p>
+    <p><%= receipt.description %></p>
+    <p><%= receipt.quantity %></p>
+    <hr/>
+  <%- end -%>
+</div>
+<br />
+<%= link_to 'New Inventory', new_receipt_path %>

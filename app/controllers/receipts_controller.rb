@@ -13,6 +13,10 @@ class ReceiptsController < ApplicationController
     end
   end
 
+  def index
+    @receipts = Receipt.all
+  end
+
   protected
   def receipt_params
     params.require(:receipt).permit(:title, :description, :quantity)

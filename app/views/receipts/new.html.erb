@@ -1,9 +1,14 @@
+<h2>Enter your inventory item here</h2>
+<br />
+
 <%= form_for(@receipt) do |f|%>
    <%= f.label :title %>
-   <%= f.text_field :title %>
+   <%= f.text_field :title, size: '40' %>
    <%= f.label :description %>
-   <%= f.text_field :description %>
+   <%= f.text_field :description, size: '50' %>
    <%= f.label :quantity %>
-   <%= f.text_field :quantity %>
+   <%= f.text_field :quantity, size: '20' %>
    <%= f.submit 'Receive' %>
 <% end %>
+<br />
+<%= link_to 'List all inventory items', receipts_path %>
